@@ -1,5 +1,15 @@
 #include <iostream>
 
+#include "types/board.h"
+#include "gui/renderer.h"
+
 int main() {
-	std::cout << "Hello World!\n";
+	Board board;
+
+	RenderSettings settings;
+	Renderer renderer(settings);
+
+	while (!renderer.shouldclose()) {
+		renderer.render();
+	}
 }
